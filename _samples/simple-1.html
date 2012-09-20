@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script src='../_js/jstures.js'></script>
+        <script src='../_js/.mergefiles.php'></script>
+        
+        <style type='text/css'>
+            html, body{
+                height: 100%;
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            #consoleEl{
+                border: solid 3px red;
+                width: 99%;
+                height: 200px;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='consoleEl'></div>
+        <script>
+            jstures.settings({
+                debug: '#consoleEl',
+                preventZoom: true,
+                preventScroll: true
+            });
+            
+            // TOUCHSTART
+            jstures.addGesture({
+                type: jstures.CONST.TOUCH_START,
+                target: document.body,
+                exec: function(){
+                    jstures.log("don't touch me!!");
+                }
+            });
+            
+            // TAP, DOUBLE TAP AND TRIPPLE TAP
+            jstures.addGesture({
+                type: jstures.CONST.TAP,
+                target: 'body',
+                exec: function(){
+                    alert('I was tapped!');
+                }
+                // [optional] used for the tapping gesture:
+              , duration: 500 // the tap must not be longer than this in mileseconds
+            });
+            
+            // HOLD
+            jstures.addGesture({
+                type: jstures.CONST.HOLD,
+                target: 'body',
+                exec: function(){
+                    alert('I was tapped!');
+                }
+                // [optional] used for holding gesture:
+              , holdFor: 1000 //mileseconds
+            });
+
+                    jstures.clearLog();
+        </script>
+    </body>
+</html>

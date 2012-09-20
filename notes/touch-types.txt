@@ -1,0 +1,12 @@
+tap
+doubleTap
+trippleTap
+hold
+moveDown
+moveUp
+moveLeft
+moveRight
+moveAway
+moveCloser
+moveFarther
+moveOff

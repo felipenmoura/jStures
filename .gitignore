@@ -1,0 +1,13 @@
+##
+## Development meta files
+##
+*.*~*
+*.*~
+*.~*
+.project
+.DS_Store
+./nbproject
+nbproject
+nbproject/*
+./notes
+./notes/*
